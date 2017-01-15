@@ -8,9 +8,8 @@ import { RECIPE_ROUTES } from './recipe/recipes.route';
 
 
 export const APP_ROUTE:Routes  = [
-        //github router refrance 
-        { path: 'A2Foodie/dist', redirectTo: 'recipes', pathMatch: 'full' },
-         //{ path: '', redirectTo: 'recipes', pathMatch: 'full' },
+        //github router refrance { path: 'A2Foodie/dist', redirectTo: 'recipes', pathMatch: 'full' },
+         { path: '', redirectTo: 'recipes', pathMatch: 'full' },
         { path: 'recipes', component: RecipeComponent, children: RECIPE_ROUTES },
         { path: 'shopping-list', component: ShoppingListComponent },
 ];
