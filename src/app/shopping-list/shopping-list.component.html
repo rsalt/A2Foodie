@@ -1,0 +1,8 @@
+<div class="row">
+    <div class="col-xs-10">
+        <prod-shopping-list-add [item]="selectedItem" (cleared)="onCleared()"></prod-shopping-list-add>
+    </div>
+</div>
+<ul class="cust-list-group row">
+    <li class="cust-list-group-item" [ngClass]="{active: item===item.name}" *ngFor="let item of items" (click)="onSelectItem(item)">{{item.name}} - Rs. ({{item.amount}}))</li>
+</ul>

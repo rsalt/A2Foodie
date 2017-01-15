@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-12">
+        <a class="btn btn-raised btn-info" [routerLink]="['new']"> New Recipe</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="list-group">
+            <!--Loop though Rcipe Items-->
+            <!--<prod-relicpe-item [recipe]="recipe" (click)="onSelected(recipe)"></prod-relicpe-item>-->
+            <!--<prod-relicpe-item *ngFor="let recipe of recipes" [recipe]="recipe" (click)="onSelected(recipe)"></prod-relicpe-item>-->
+            <prod-relicpe-item *ngFor="let recipe of recipes; let i = index;" [recipe]="recipe" [recipeId]="i"></prod-relicpe-item>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<p>
+  databinding works!
+  <input type="text" value="{{stingInterpolation}}">
+  {{stingInterpolation}} | {{numberInterpolation}}
+</p>
+<!--Property binding woking just fine -->
+<p [ngClass]="{redBorder: onTest()}"> Another Property Binding with style css</p>
+<p [ngStyle]="{color: 'blue'}"> Another Property Binding with style css</p>
+
+<!--Custom Property Binding-->
+
+<prod-property-binding [result]="12"></prod-property-binding>
+
+<!--Custom Event Binding-->
+
+<prod-event-binding (clickable)="onClicked($event)"></prod-event-binding>
+
+<hr>
+<!--Two way databinding-->
+<h3>
+  Two Way Databinding Method
+</h3>
+<prod-two-way-binding></prod-two-way-binding>
